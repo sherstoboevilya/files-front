@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.scss';
+import LayoutHeader from "./Layouts/LayoutHeader";
+import Prodengi from "./Pages/Prodengi";
+import Tengeda from "./Pages/Tengeda";
+
+const listLinks = [
+    {
+        title: 'Проденьги',
+        component: 'Prodengi',
+    },
+    {
+        title: 'ТенгеДа',
+        component: 'TengeDa',
+    },
+];
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    let [activeComponent, setActiveComponent] = useState(listLinks[0])
+
+    return (
+        <div className="main">
+            <LayoutHeader links={listLinks} active={activeComponent} setActive={setActiveComponent}/>
+            <div className="main__content">
+                {
+                    activeComponent.component === 'Prodengi'
+                        ? <Prodengi/>
+                        : <Tengeda/>
+                }
+            </div>
+        </div>
+    );
 }
 
 export default App;

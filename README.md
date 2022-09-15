@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# Фронт для файлового сервиса
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Вывод всех изображений и папок из апи [https://files.prodengi.kz/api/v1/upload](https://files.prodengi.kz/api/v1/upload)
 
-## Available Scripts
+----------------
 
-In the project directory, you can run:
+## Папки и их назначения
 
-### `npm start`
+### App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Папка состоит из некоторых повторно используемых функций, которые обычно используются в проекте. Он должен содержать только общие функции и объекты js, такие как параметры раскрывающегося списка, условие регулярного выражения, форматирование данных и т. д. Содержит все вспомогательные файлы для разбраотки проекта (api, helpers, services)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Assets
 
-### `npm test`
+Содержит все стили и изображения
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Components
 
-### `npm run build`
+Содержит все реактивные блоки для построения пользовательского интерфейса
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Config
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Эта папка состоит из файла конфигурации, в котором мы храним переменные среды в config.js. Мы будем использовать этот файл для настройки конфигураций нескольких сред в вашем приложении.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Layouts
 
-### `npm run eject`
+Содержит все макеты доступные для всего проекта (header, footer, nav, ...)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Pages
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Файлы в папке pages указывают маршрут реагирующего приложения. Каждый файл в этой папке содержит свой маршрут. Страница может содержать свою подпапку. Каждая страница имеет свое состояние и обычно используется для вызова асинхронной операции. Он обычно состоит из различных компонентов, сгруппированных.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Router
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Эта папка состоит из всех маршрутов приложения. Он состоит из частных, защищенных и всех типов маршрутов. Здесь мы даже можем назвать наш подмаршрут.
 
-## Learn More
+### Services
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Эта папка хранит redux в проекте.
+Внутри него есть 3 папки с именами: действия, редукторы и константные подпапки для управления состояниями.
+Действия и редьюсеры будут вызываться почти на всех страницах, поэтому создавайте действия, редьюсеры и константы в соответствии с названием страниц.

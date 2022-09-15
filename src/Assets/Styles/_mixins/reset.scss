@@ -1,0 +1,140 @@
+@import "./src/Assets/Styles/variable";
+
+h1 {
+    font-family: Montserrat, sans-serif;
+}
+
+:root {
+    font-size: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: $gray3-color;
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $gray2-color;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: $white-color;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: $gray2-color;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: $gray2-color;
+}
+
+::-webkit-resizer {
+    background-color: $gray4-light-color;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    transition: $transition-time;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+html {
+    font-family: $primary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    color: $text-color;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    color: $text-color;
+    height: 100%;
+}
+
+#__nuxt,
+#__layout {
+    height: 100%;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    color: $text-color;
+}
+
+h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: $text-color;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 24px;
+    color: $text-color;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: $text-color;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    color: $text-color;
+    background: none;
+    border: none;
+}

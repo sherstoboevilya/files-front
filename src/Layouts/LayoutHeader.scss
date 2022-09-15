@@ -1,0 +1,8 @@
+.layout-header {
+  max-width: 600px;
+  margin: 50px auto 30px;
+  &__links {
+    display: flex;
+    list-style: none;
+  }
+}
