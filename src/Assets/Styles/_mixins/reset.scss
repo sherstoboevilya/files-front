@@ -134,7 +134,13 @@ button:focus {
 }
 
 button {
+    cursor: pointer;
     color: $text-color;
     background: none;
     border: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }

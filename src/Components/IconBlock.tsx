@@ -1,9 +1,26 @@
 import React from 'react';
+import './IconBlock.scss'
 
-const IconBlock = () => {
+const IconBlock = ({content, setModal}: any) => {
+    function concatModalOptions() {
+        return {
+            type: 'ModalMore',
+            content: content,
+        }
+    }
     return (
-        <div>
-            <h1>ICON</h1>
+        <div className="icon">
+            <img
+                className='icon__image'
+                src={content[Object.keys(content)[0]]}
+                alt="Изображение"
+            />
+                <button
+                    className='icon__more'
+                    onClick={() => setModal(concatModalOptions())}
+                >
+                    Выбрать
+                </button>
         </div>
     );
 };

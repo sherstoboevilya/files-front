@@ -3,12 +3,12 @@ import {ExampleApi} from "../App/helpers/exmpleApi";
 import ImageContent from "../Components/ImageContent";
 
 
-const Prodengi = () => {
+// @ts-ignore
+const Prodengi = ({setModal}) => {
     const content = ExampleApi;
     return (
         <div>
-            <h1>PRODENGI</h1>
-            <ImageContent content={content}/>
+            <ImageContent setModal={setModal} content={content}/>
         </div>
     );
 };

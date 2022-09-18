@@ -1,0 +1,20 @@
+.icon {
+  max-width: 130px;
+  margin: 0 auto;
+  padding: 15px;
+  height: fit-content;
+  position: relative;
+  &__image {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 5px;
+  }
+  &__more {
+    height: 100%;
+    width: 100%;
+    background: #46ac4a;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+  }
+}
